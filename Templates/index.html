@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gesture Control</title>
+    <style>
+        body {
+            background-image: url('{{ url_for("static", filename="Sea.jpg") }}');
+            background-size: cover;
+background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+        button {
+            padding: 15px 30px;
+            margin: 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .run {
+            background-color: #4CAF50;
+        }
+        .stop {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+   <h1 style="color: White;">Gesture Control Interface</h1>
+
+    <a href="/run"><button class="run">▶ Run</button></a>
+    <a href="/stop"><button class="stop">■ Stop</button></a>
+    {% if message %}
+        <p style="margin-top: 30px; font-size: 24px; color:white;">{{ message }}</p>
+
+    {% endif %}
+</body>
+</html>
